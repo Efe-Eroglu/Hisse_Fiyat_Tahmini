@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisselerin Görselleştirilmesi</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #graf {
+            margin-top: 20px;
+        }
+
+        .node {
+            fill: steelblue;
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+    </style>
+</head>
+<body>
+    <svg id="graf"></svg>
+
+    <script>
+        // JSON verilerini al
+        d3.json("hisseler.json").then(function(data) {
+            // Fiyatları float'a dönüştür
+            data.forEach(function(hisse) {
+                hisse.Fiyat = parseFloat(hisse.Fiyat.replace(",", "."));
+            });
+
+            // SVG boyutları
+            var width = window.innerWidth * 0.8;
+            var height = window.innerHeight * 0.6;
+
+            // Düğümleri oluştur
+            var svg = d3.select("#graf")
+                        .attr("width", width)
+                        .attr("height", height);
+
+            // Her satırda 3 hisse olacak şekilde düzenle
+            var rows = Math.ceil(data.length / 3);
+            var xScale = d3.scaleLinear().domain([0, 2]).range([100, width - 100]);
+            var yScale = d3.scaleLinear().domain([0, rows - 1]).range([50, height - 50]);
+
+            // İlişkili hisseleri belirlemek için bir eşik değeri belirle
+            var relationshipThreshold = 100; // Örnek bir eşik değeri
+
+            // Düğümleri oluştur
+            var nodes = svg.selectAll(".node")
+                           .data(data)
+                           .enter()
+                           .append("circle")
+                           .attr("class", "node")
+                           .attr("cx", function(d, i) { return xScale(i % 3); })
+                           .attr("cy", function(d, i) { return yScale(Math.floor(i / 3)); })
+                           .attr("r", function(d) { return d.Fiyat / 50; }) // Fiyata göre boyutlandır
+                           .attr("fill", function(d) { return d.Fiyat > relationshipThreshold ? "red" : "steelblue"; }); // Eşik değerini aşan hisseleri kırmızıya boyala
+
+            // Düğümlere isim etiketleri ekle
+            var labels = svg.selectAll(".label")
+                            .data(data)
+                            .enter()
+                            .append("text")
+                            .attr("class", "label")
+                            .attr("x", function(d, i) { return xScale(i % 3); })
+                            .attr("y", function(d, i) { return yScale(Math.floor(i / 3)) + 25; })
+                            .text(function(d) { return d.Hisse; });
+
+            // İlişki çizgilerini oluştur
+            for (var i = 0; i < data.length; i++) {
+                var x1 = xScale(i % 3);
+                var y1 = yScale(Math.floor(i / 3));
+                for (var j = 0; j < data.length; j++) {
+                    if (i != j && Math.abs(data[i].Fiyat - data[j].Fiyat) > relationshipThreshold) { // Eşik değeri aşan hisseler arasında ilişki oluştur
+                        var x2 = xScale(j % 3);
+                        var y2 = yScale(Math.floor(j / 3));
+                        svg.append("line")
+                           .attr("x1", x1)
+                           .attr("y1", y1)
+                           .attr("x2", x2)
+                           .attr("y2", y2)
+                           .attr("stroke", "gray")
+                           .attr("stroke-width", 1)
+                           .attr("opacity", 0.5);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
