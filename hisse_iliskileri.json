@@ -1,0 +1,714 @@
+{
+    "hisse_iliskileri": [
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "ASELS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "BIMAS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "EGEEN.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "GARAN.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "ISCTR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "KCHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "SAHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "TAVHL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "TCELL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "TTKOM.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALARK.IS",
+            "hisse2": "ARCLK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALARK.IS",
+            "hisse2": "DOAS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALARK.IS",
+            "hisse2": "DOHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALARK.IS",
+            "hisse2": "ENJSA.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALARK.IS",
+            "hisse2": "PGSUS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALFAS.IS",
+            "hisse2": "ASTOR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALFAS.IS",
+            "hisse2": "EUPWR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALFAS.IS",
+            "hisse2": "KONTR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALFAS.IS",
+            "hisse2": "ODAS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALFAS.IS",
+            "hisse2": "OYAKC.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ALFAS.IS",
+            "hisse2": "SMRTG.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ARCLK.IS",
+            "hisse2": "DOHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ARCLK.IS",
+            "hisse2": "PGSUS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ARCLK.IS",
+            "hisse2": "SISE.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "BIMAS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "EGEEN.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "ENJSA.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "GARAN.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "ISCTR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "KCHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "MGROS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "SAHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "TAVHL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "TCELL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "THYAO.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "TUPRS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "ULKER.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASELS.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASTOR.IS",
+            "hisse2": "DOHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASTOR.IS",
+            "hisse2": "EUPWR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASTOR.IS",
+            "hisse2": "KONTR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASTOR.IS",
+            "hisse2": "ODAS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASTOR.IS",
+            "hisse2": "OYAKC.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASTOR.IS",
+            "hisse2": "SISE.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ASTOR.IS",
+            "hisse2": "SMRTG.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "EGEEN.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "ENJSA.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "GARAN.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "ISCTR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "KCHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "MGROS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "SAHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "TCELL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "TUPRS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "ULKER.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "CIMSA.IS",
+            "hisse2": "KONTR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "CIMSA.IS",
+            "hisse2": "OYAKC.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "DOAS.IS",
+            "hisse2": "ENJSA.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "DOAS.IS",
+            "hisse2": "KCHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "DOAS.IS",
+            "hisse2": "THYAO.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "DOHOL.IS",
+            "hisse2": "KONTR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "DOHOL.IS",
+            "hisse2": "OYAKC.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "EGEEN.IS",
+            "hisse2": "SAHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "EGEEN.IS",
+            "hisse2": "ULKER.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "EGEEN.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ENJSA.IS",
+            "hisse2": "KCHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ENJSA.IS",
+            "hisse2": "MGROS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ENJSA.IS",
+            "hisse2": "PETKM.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ENJSA.IS",
+            "hisse2": "SAHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ENJSA.IS",
+            "hisse2": "TAVHL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ENJSA.IS",
+            "hisse2": "TCELL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ENJSA.IS",
+            "hisse2": "THYAO.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ENJSA.IS",
+            "hisse2": "TUPRS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ENJSA.IS",
+            "hisse2": "ZOREN.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "EUPWR.IS",
+            "hisse2": "KONTR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "EUPWR.IS",
+            "hisse2": "OYAKC.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "EUPWR.IS",
+            "hisse2": "SMRTG.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "FROTO.IS",
+            "hisse2": "TAVHL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "FROTO.IS",
+            "hisse2": "VESTL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GARAN.IS",
+            "hisse2": "ISCTR.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GARAN.IS",
+            "hisse2": "KCHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GARAN.IS",
+            "hisse2": "MGROS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GARAN.IS",
+            "hisse2": "SAHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GARAN.IS",
+            "hisse2": "TCELL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GARAN.IS",
+            "hisse2": "THYAO.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GARAN.IS",
+            "hisse2": "TTKOM.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GARAN.IS",
+            "hisse2": "TUPRS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GARAN.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GESAN.IS",
+            "hisse2": "ODAS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "GESAN.IS",
+            "hisse2": "SMRTG.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ISCTR.IS",
+            "hisse2": "KCHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ISCTR.IS",
+            "hisse2": "MGROS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ISCTR.IS",
+            "hisse2": "SAHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ISCTR.IS",
+            "hisse2": "TCELL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ISCTR.IS",
+            "hisse2": "TUPRS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ISCTR.IS",
+            "hisse2": "ULKER.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ISCTR.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KCHOL.IS",
+            "hisse2": "MGROS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KCHOL.IS",
+            "hisse2": "SAHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KCHOL.IS",
+            "hisse2": "TAVHL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KCHOL.IS",
+            "hisse2": "TCELL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KCHOL.IS",
+            "hisse2": "THYAO.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KCHOL.IS",
+            "hisse2": "TUPRS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KCHOL.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KONTR.IS",
+            "hisse2": "ODAS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KONTR.IS",
+            "hisse2": "OYAKC.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KONTR.IS",
+            "hisse2": "SMRTG.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KOZAA.IS",
+            "hisse2": "KOZAL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KRDMD.IS",
+            "hisse2": "OYAKC.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "KRDMD.IS",
+            "hisse2": "SISE.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "MGROS.IS",
+            "hisse2": "PETKM.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "MGROS.IS",
+            "hisse2": "SAHOL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "MGROS.IS",
+            "hisse2": "TCELL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "MGROS.IS",
+            "hisse2": "THYAO.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "MGROS.IS",
+            "hisse2": "TUPRS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "MGROS.IS",
+            "hisse2": "ULKER.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "MIATK.IS",
+            "hisse2": "ULKER.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "ODAS.IS",
+            "hisse2": "SMRTG.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "OYAKC.IS",
+            "hisse2": "SMRTG.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "SAHOL.IS",
+            "hisse2": "TAVHL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "SAHOL.IS",
+            "hisse2": "TCELL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "SAHOL.IS",
+            "hisse2": "THYAO.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "SAHOL.IS",
+            "hisse2": "TTKOM.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "SAHOL.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "SISE.IS",
+            "hisse2": "SMRTG.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "TAVHL.IS",
+            "hisse2": "THYAO.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "TAVHL.IS",
+            "hisse2": "VESTL.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "TAVHL.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "TCELL.IS",
+            "hisse2": "THYAO.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "TCELL.IS",
+            "hisse2": "TTKOM.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "TCELL.IS",
+            "hisse2": "TUPRS.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "TCELL.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "TTKOM.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "TUPRS.IS",
+            "hisse2": "ULKER.IS",
+            "iliski": "Korele"
+        },
+        {
+            "hisse1": "AKBNK.IS",
+            "hisse2": "HEKTS.IS",
+            "iliski": "Ters Korele"
+        },
+        {
+            "hisse1": "BIMAS.IS",
+            "hisse2": "HEKTS.IS",
+            "iliski": "Ters Korele"
+        },
+        {
+            "hisse1": "EGEEN.IS",
+            "hisse2": "HEKTS.IS",
+            "iliski": "Ters Korele"
+        },
+        {
+            "hisse1": "HEKTS.IS",
+            "hisse2": "ISCTR.IS",
+            "iliski": "Ters Korele"
+        },
+        {
+            "hisse1": "HEKTS.IS",
+            "hisse2": "ULKER.IS",
+            "iliski": "Ters Korele"
+        },
+        {
+            "hisse1": "HEKTS.IS",
+            "hisse2": "YKBNK.IS",
+            "iliski": "Ters Korele"
+        }
+    ]
+}

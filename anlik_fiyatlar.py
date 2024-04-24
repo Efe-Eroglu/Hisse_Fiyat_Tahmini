@@ -17,19 +17,16 @@ view_all_button.click()
 
 hisseler = []
 
-
-for i in range(1,555):
-    hisse = driver.find_element(By.XPATH,f"/html/body/div[1]/div/div/div/div[6]/table/tbody/tr[{i}]/td[1]/a").text
-    fiyat = driver.find_element(By.XPATH,f"/html/body/div[1]/div/div/div/div[6]/table/tbody/tr[{i}]/td[2]").text
-    fark = driver.find_element(By.XPATH,f"/html/body/div[1]/div/div/div/div[6]/table/tbody/tr[{i}]/td[5]").text
+# Tüm hisse fiyatlarını ve farklarını çek
+rows = driver.find_elements(By.XPATH, "/html/body/div[1]/div/div/div/div[6]/table/tbody/tr")
+for row in rows:
+    hisse = row.find_element(By.XPATH, "./td[1]/a").text
+    fiyat = row.find_element(By.XPATH, "./td[2]").text
+    fark = row.find_element(By.XPATH, "./td[5]").text
 
     hisseler.append({"Hisse": hisse, "Fiyat": fiyat, "Fark": fark})
-
-
-    print(hisseler)
-
- # JSON dosyasına hisseleri kaydet
+# JSON dosyasına hisseleri kaydet
 with open("hisseler.json", "w") as json_file:
-    json.dump(hisseler, json_file)   
+    json.dump(hisseler, json_file)
 
 driver.quit()

@@ -1,96 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hisselerin Görselleştirilmesi</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İlişki Grafiği</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #graf {
-            margin-top: 20px;
-        }
-
-        .node {
-            fill: steelblue;
-            stroke: #fff;
-            stroke-width: 2px;
-        }
+      /* CSS */
+      svg {
+        border: 1px solid #ddd;
+      }
+      .link {
+        stroke: #999;
+        stroke-opacity: 0.6;
+      }
+      .node {
+        fill: red;
+        stroke: #fff;
+        stroke-width: 1.5px;
+      }
     </style>
-</head>
-<body>
-    <svg id="graf"></svg>
-
+  </head>
+  <body>
+    <svg width="1500" height="700"></svg>
+    <script src="https://d3js.org/d3.v5.js"></script>
     <script>
-        // JSON verilerini al
-        d3.json("hisseler.json").then(function(data) {
-            // Fiyatları float'a dönüştür
-            data.forEach(function(hisse) {
-                hisse.Fiyat = parseFloat(hisse.Fiyat.replace(",", "."));
+      d3.json("hisse_iliskileri.json").then(function (data) {
+        var nodes = {};
+        var links = [];
+
+        data.hisse_iliskileri.forEach(function (d) {
+          var source = d.hisse1;
+          var target = d.hisse2;
+          var relation = d.iliski;
+
+          if (!nodes[source]) nodes[source] = { name: source };
+          if (!nodes[target]) nodes[target] = { name: target };
+
+          links.push({ source: source, target: target, relation: relation });
+        });
+
+        var svg = d3.select("svg"),
+          width = +svg.attr("width"),
+          height = +svg.attr("height");
+
+        var simulation = d3
+          .forceSimulation(Object.values(nodes))
+          .force(
+            "link",
+            d3.forceLink(links).id(function (d) {
+              return d.name;
+            })
+          )
+          .force("charge", d3.forceManyBody())
+          .force("center", d3.forceCenter(width / 2, height / 2));
+
+        var link = svg
+          .selectAll(".link")
+          .data(links)
+          .enter()
+          .append("line")
+          .attr("class", "link")
+          .style("stroke", "#999")
+          .style("stroke-opacity", 0.6);
+
+        var node = svg
+          .selectAll(".node")
+          .data(Object.values(nodes))
+          .enter()
+          .append("circle")
+          .attr("class", "node")
+          .attr("r", 5)
+          .style("fill", "red")
+          .call(
+            d3
+              .drag()
+              .on("start", dragstarted)
+              .on("drag", dragged)
+              .on("end", dragended)
+          );
+
+        node.append("title").text(function (d) {
+          return d.name;
+        });
+
+        simulation.on("tick", ticked);
+
+        function ticked() {
+          link
+            .attr("x1", function (d) {
+              return d.source.x;
+            })
+            .attr("y1", function (d) {
+              return d.source.y;
+            })
+            .attr("x2", function (d) {
+              return d.target.x;
+            })
+            .attr("y2", function (d) {
+              return d.target.y;
             });
 
-            // SVG boyutları
-            var width = window.innerWidth * 0.8;
-            var height = window.innerHeight * 0.6;
+          node
+            .attr("cx", function (d) {
+              return d.x;
+            })
+            .attr("cy", function (d) {
+              return d.y;
+            });
+        }
 
-            // Düğümleri oluştur
-            var svg = d3.select("#graf")
-                        .attr("width", width)
-                        .attr("height", height);
+        function dragstarted(event, d) {
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          d.fx = d.x;
+          d.fy = d.y;
+        }
 
-            // Her satırda 3 hisse olacak şekilde düzenle
-            var rows = Math.ceil(data.length / 3);
-            var xScale = d3.scaleLinear().domain([0, 2]).range([100, width - 100]);
-            var yScale = d3.scaleLinear().domain([0, rows - 1]).range([50, height - 50]);
+        function dragged(event, d) {
+          d.fx = event.x;
+          d.fy = event.y;
+        }
 
-            // İlişkili hisseleri belirlemek için bir eşik değeri belirle
-            var relationshipThreshold = 100; // Örnek bir eşik değeri
-
-            // Düğümleri oluştur
-            var nodes = svg.selectAll(".node")
-                           .data(data)
-                           .enter()
-                           .append("circle")
-                           .attr("class", "node")
-                           .attr("cx", function(d, i) { return xScale(i % 3); })
-                           .attr("cy", function(d, i) { return yScale(Math.floor(i / 3)); })
-                           .attr("r", function(d) { return d.Fiyat / 50; }) // Fiyata göre boyutlandır
-                           .attr("fill", function(d) { return d.Fiyat > relationshipThreshold ? "red" : "steelblue"; }); // Eşik değerini aşan hisseleri kırmızıya boyala
-
-            // Düğümlere isim etiketleri ekle
-            var labels = svg.selectAll(".label")
-                            .data(data)
-                            .enter()
-                            .append("text")
-                            .attr("class", "label")
-                            .attr("x", function(d, i) { return xScale(i % 3); })
-                            .attr("y", function(d, i) { return yScale(Math.floor(i / 3)) + 25; })
-                            .text(function(d) { return d.Hisse; });
-
-            // İlişki çizgilerini oluştur
-            for (var i = 0; i < data.length; i++) {
-                var x1 = xScale(i % 3);
-                var y1 = yScale(Math.floor(i / 3));
-                for (var j = 0; j < data.length; j++) {
-                    if (i != j && Math.abs(data[i].Fiyat - data[j].Fiyat) > relationshipThreshold) { // Eşik değeri aşan hisseler arasında ilişki oluştur
-                        var x2 = xScale(j % 3);
-                        var y2 = yScale(Math.floor(j / 3));
-                        svg.append("line")
-                           .attr("x1", x1)
-                           .attr("y1", y1)
-                           .attr("x2", x2)
-                           .attr("y2", y2)
-                           .attr("stroke", "gray")
-                           .attr("stroke-width", 1)
-                           .attr("opacity", 0.5);
-                    }
-                }
-            }
-        });
+        function dragended(event, d) {
+          if (!event.active) simulation.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
