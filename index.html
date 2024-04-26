@@ -1,177 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>İlişki Grafiği</title>
-    <style>
-      /* CSS */
-      svg {
-        border: 1px solid #ddd;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      .link {
-        stroke: #999; /* Bağlantı çizgilerinin rengi */
-        stroke-opacity: 0.6; /* Bağlantı çizgilerinin opaklığı */
-      }
-      .node {
-        fill: red; /* Düğümlerin iç rengi */
-        stroke: #fff; /* Düğümlerin kenar rengi */
-        stroke-width: 1.5px; /* Düğümlerin kenar kalınlığı */
-      }
-    </style>
-  </head>
-  <body>
-    <svg width="1510" height="1000"></svg>
-    <script src="https://d3js.org/d3.v5.js"></script>
-    <script>
-      d3.json("hisse_iliskileri.json").then(function (data) {
-        var nodes = {};
-        var links = [];
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İlişki Grafiği</title>
+  <style>
+    /* CSS */
+    body {
+      background-color: #f9f9f9;
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid gray;
+    }
+    .link {
+      stroke: #ccc; /* Bağlantı çizgilerinin rengi */
+      stroke-width: 1.5px; /* Bağlantı çizgilerinin kalınlığı */
+    }
+    .node {
+      fill: #00ffaa; /* Düğümlerin iç rengi */
+      stroke-width: 2px; /* Düğümlerin kenar kalınlığı */
 
-        // Veri JSON dosyasından alınıyor ve düğüm ve bağlantı verileri oluşturuluyor
-        data.hisse_iliskileri.forEach(function (d) {
-          var source = d.hisse1;
-          var target = d.hisse2;
-          var relation = d.iliski;
+    }
+    .node-label {
+      font-size: 12px;
+      fill: #ffffff;
+      font-weight: normal;
+      text-anchor: middle;
+    }
+  </style>
+</head>
+<body>
 
-          if (!nodes[source]) nodes[source] = { name: source };
-          if (!nodes[target]) nodes[target] = { name: target };
 
-          links.push({ source: source, target: target, relation: relation });
-        });
 
-        var svg = d3.select("svg"),
-          width = +svg.attr("width"),
-          height = +svg.attr("height");
+  <svg width="1510" height="1000"></svg>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="script.js"></script>
 
-        // D3 kuvvet simülasyonu tanımlanıyor
-        var simulation = d3
-          .forceSimulation(Object.values(nodes))
-          .force(
-            "link",
-            d3
-              .forceLink(links)
-              .id(function (d) {
-                return d.name;
-              })
-              .distance(200) // Bağlantıların uzaklığı (düğümler arası mesafe)
-          )
-          .force("charge", d3.forceManyBody().strength(-100)) // Düğümler arasındaki itme kuvveti
-          .force("center", d3.forceCenter(width / 2, height / 2)) // Merkez kuvveti
-          .force("collide", d3.forceCollide().radius(20)) // Çarpışma kuvveti (düğümlerin iç içe geçmemesi için)
-          .force("boundary", boundaryForce(width, height)); // Çerçeve sınırları kuvveti
-
-        // Bağlantıları çizmek için SVG seçiliyor
-        var link = svg
-          .selectAll(".link")
-          .data(links)
-          .enter()
-          .append("line")
-          .attr("class", "link")
-          .style("stroke", "#999") // Bağlantı çizgilerinin rengi
-          .style("stroke-opacity", 0.6); // Bağlantı çizgilerinin opaklığı
-
-        // Düğümleri çizmek için SVG seçiliyor
-        var node = svg
-          .selectAll(".node")
-          .data(Object.values(nodes))
-          .enter()
-          .append("circle")
-          .attr("class", "node")
-          .attr("r", 20)
-          .style("fill", "red") // Düğümlerin iç rengi
-          .call(
-            d3
-              .drag()
-              .on("start", dragstarted)
-              .on("drag", dragged)
-              .on("end", dragended)
-          );
-
-        // Her düğüm için hisse ismini düğümün içine yazıyoruz
-        node
-          .append("text")
-          .text(function (d) {
-            return d.name;
-          })
-          .attr("text-anchor", "middle") // Metni ortalamak için
-          .attr("dy", 4) // Düğümün içinde daha merkezi olması için biraz aşağı kaydırıyoruz
-          .style("font-size", "12px") // Yazı boyutunu belirliyoruz
-          .style("fill", "blue"); // Yazı rengini belirliyoruz
-
-        // Düğümlere fare üzerine geldiğinde adlarını gösteren bir başlık  ekleniyor
-        node.append("title").text(function (d) {
-          return d.name;
-        });
-
-        // Kuvvet simülasyonu güncelleme fonksiyonu tanımlanıyor
-        simulation.on("tick", ticked);
-
-        function ticked() {
-          // Bağlantıların konumları güncelleniyor
-          link
-            .attr("x1", function (d) {
-              return d.source.x;
-            })
-            .attr("y1", function (d) {
-              return d.source.y;
-            })
-            .attr("x2", function (d) {
-              return d.target.x;
-            })
-            .attr("y2", function (d) {
-              return d.target.y;
-            });
-
-          // Düğümlerin konumları güncelleniyor
-          node
-            .attr("cx", function (d) {
-              return d.x;
-            })
-            .attr("cy", function (d) {
-              return d.y;
-            });
-        }
-
-        function dragstarted(event, d) {
-          // Sürükleme başladığında kuvvet simülasyonu yeniden başlatılıyor
-          if (!event.active) simulation.alphaTarget(0.3).restart();
-          d.fx = d.x;
-          d.fy = d.y;
-        }
-
-        function dragged(event, d) {
-          // Sürüklenen düğümün konumu güncelleniyor
-          d.fx = event.x;
-          d.fy = event.y;
-        }
-
-        function dragended(event, d) {
-          // Sürükleme bittiğinde düğümün sabitlenmesi durduruluyor
-          if (!event.active) simulation.alphaTarget(0);
-          d.fx = null;
-          d.fy = null;
-        }
-
-        function boundaryForce(width, height) {
-          return function () {
-            for (var i = 0, n = nodes.length; i < n; ++i) {
-              var node = nodes[i];
-              node.x = Math.max(
-                node.radius,
-                Math.min(width - node.radius, node.x)
-              );
-              node.y = Math.max(
-                node.radius,
-                Math.min(height - node.radius, node.y)
-              );
-            }
-          };
-        }
-      });
-    </script>
-  </body>
+  
+</body>
 </html>
