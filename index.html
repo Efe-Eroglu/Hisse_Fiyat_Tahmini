@@ -3,43 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>İlişki Grafiği</title>
+  <title>Kolere Hisseler</title>
   <style>
     /* CSS */
+    html::-webkit-scrollbar {
+      display: none;
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: #f9f9f9;
     }
+
     svg {
       position: absolute;
       top: 0;
+      margin-top: 150px;
       left: 0;
       border: 1px solid gray;
     }
+
     .link {
       stroke: #ccc; /* Bağlantı çizgilerinin rengi */
       stroke-width: 1.5px; /* Bağlantı çizgilerinin kalınlığı */
     }
+
     .node {
       fill: #00ffaa; /* Düğümlerin iç rengi */
       stroke-width: 2px; /* Düğümlerin kenar kalınlığı */
-
     }
+
     .node-label {
-      font-size: 12px;
+      font-size: 16px; /* Düğüm etiketlerinin yazı boyutu */
       fill: #ffffff;
-      font-weight: normal;
       text-anchor: middle;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .baslik {
+      text-align: center;
+      width: 600px;
+      margin: 0 auto;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .aciklama {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .ters {
+      display: flex;
+    }
+
+    .kolere {
+      display: flex;
     }
   </style>
 </head>
 <body>
+  <div class="baslik">
+    <h1>Kolere Hisselerin Görselleştirilmesi</h1>
+    <div class="aciklama">
+      <div class="kolere">
+        Kolere :
+        <div
+          style="
+            background-color: red;
+            font-size: 12px;
+            width: 50px;
+            height: 12px;
+            margin-top: 5px;
+            margin-left: 10px;
+          "
+        ></div>
+      </div>
+      <div class="ters">
+        Ters Kolere
+        <div
+          style="
+            background-color: blue;
+            font-size: 12px;
+            width: 50px;
+            height: 12px;
+            margin-top: 5px;
+            margin-left: 10px;
+          "
+        ></div>
+      </div>
+    </div>
+  </div>
 
+  <svg width="2300" height="2500"></svg>
 
-
-  <svg width="1510" height="1000"></svg>
   <script src="https://d3js.org/d3.v5.js"></script>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 
-  
 </body>
 </html>

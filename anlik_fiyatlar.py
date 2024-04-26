@@ -25,8 +25,10 @@ for row in rows:
     fark = row.find_element(By.XPATH, "./td[5]").text
 
     hisseler.append({"Hisse": hisse, "Fiyat": fiyat, "Fark": fark})
+
+
 # JSON dosyasına hisseleri kaydet
-with open("hisseler.json", "w") as json_file:
+with open("data/hisseler.json", "w") as json_file:
     json.dump(hisseler, json_file)
 
 driver.quit()

@@ -1,4 +1,4 @@
-d3.json("hisse_iliskileri.json").then(function (data) {
+d3.json("data/hisse_iliskileri.json").then(function (data) {
     var nodes = {};
     var links = [];
 
@@ -15,70 +15,108 @@ d3.json("hisse_iliskileri.json").then(function (data) {
     });
 
     var svg = d3.select("svg"),
-        width = +svg.attr("width"),
-        height = +svg.attr("height"),
-        radius = Math.min(width, height) / 2 - 50;
+      width = +svg.attr("width"),
+      height = +svg.attr("height"),
+      radius = Math.min(width, height) / 2 - 50;
 
-    var angle = Math.PI * 2 / Object.keys(nodes).length;
+    var angle = (Math.PI * 2) / Object.keys(nodes).length;
 
-    Object.values(nodes).forEach(function(node, i) {
+    Object.values(nodes).forEach(function (node, i) {
       node.x = width / 2 + radius * Math.cos(angle * i);
       node.y = height / 2 + radius * Math.sin(angle * i);
     });
 
     // D3 kuvvet simülasyonu tanımlanıyor
-    var simulation = d3.forceSimulation(Object.values(nodes))
-      .force("link", d3.forceLink(links).id(function (d) { return d.name; }).distance(200)) // Bağlantıların uzaklığı
-      .force("charge", d3.forceManyBody().strength(-100)) // Düğümler arasındaki itme kuvveti
-      .force("center", d3.forceCenter(width / 2, height / 2)) // Merkez kuvveti
-      .force("collide", d3.forceCollide().radius(25)) // Çarpışma kuvveti (düğümlerin iç içe geçmemesi için)
-      .force("boundary", boundaryForce(width, height)); // Çerçeve sınırları kuvveti
+    var simulation = d3
+      .forceSimulation(Object.values(nodes))
+      .force(
+        "link",
+        d3.forceLink(links).id(function (d) {
+          return d.name;
+        })
+      )
+      .force("charge", d3.forceManyBody().strength(-100))
+      .force("center", d3.forceCenter(width / 2, height / 2))
+      .force("collide", d3.forceCollide().radius(120)) // Yarıçapı artırıyoruz
+      .force("y", d3.forceY(height / 2)) // Y eksenindeki kuvveti belirliyoruz
+      .force("x", d3.forceX(width / 2)); // X eksenindeki kuvveti belirliyoruz
 
     // Bağlantıları çizmek için SVG seçiliyor
-    var link = svg.selectAll(".link")
+    var link = svg
+      .selectAll(".link")
       .data(links)
-      .enter().append("line")
+      .enter()
+      .append("line")
       .attr("class", "link");
 
     // Düğümleri çizmek için SVG seçiliyor
-    var nodeGroup = svg.selectAll(".node")
+    var nodeGroup = svg
+      .selectAll(".node")
       .data(Object.values(nodes))
-      .enter().append("g")
+      .enter()
+      .append("g")
       .attr("class", "node")
-      .call(d3.drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended));
+      .call(
+        d3
+          .drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended)
+      );
 
     // Düğüm daireleri ekleniyor
-    var node = nodeGroup.append("circle")
-      .attr("r", 30)
-      .style("fill", "#2c7bb6")
+    var node = nodeGroup
+      .append("circle")
+      .attr("r", 40)
+      .style("fill", "maroon")
       .style("stroke", "#fff")
       .style("stroke-width", "2px");
 
     // Düğüm etiketleri ekleniyor
-    var label = nodeGroup.append("text")
+    var label = nodeGroup
+      .append("text")
       .attr("class", "node-label")
-      .text(function(d) { return d.name; });
+      .text(function (d) {
+        // Düğüm adının son üç harfini kaldırarak metni oluştur
+        return d.name.slice(0, -3); // Son üç harfi kaldır
+      });
 
     // Kuvvet simülasyonu güncelleme fonksiyonu tanımlanıyor
     simulation.on("tick", ticked);
 
     function ticked() {
       // Bağlantıların konumları güncelleniyor
-      link.attr("x1", function (d) { return d.source.x; })
-          .attr("y1", function (d) { return d.source.y; })
-          .attr("x2", function (d) { return d.target.x; })
-          .attr("y2", function (d) { return d.target.y; });
+      link
+        .attr("x1", function (d) {
+          return d.source.x;
+        })
+        .attr("y1", function (d) {
+          return d.source.y;
+        })
+        .attr("x2", function (d) {
+          return d.target.x;
+        })
+        .attr("y2", function (d) {
+          return d.target.y;
+        });
 
       // Düğümlerin konumları güncelleniyor
-      node.attr("cx", function (d) { return d.x = Math.max(20, Math.min(width - 20, d.x)); })
-          .attr("cy", function (d) { return d.y = Math.max(20, Math.min(height - 20, d.y)); });
+      node
+        .attr("cx", function (d) {
+          return (d.x = Math.max(20, Math.min(width - 20, d.x)));
+        })
+        .attr("cy", function (d) {
+          return (d.y = Math.max(20, Math.min(height - 20, d.y)));
+        });
 
       // Düğüm etiketlerinin konumları güncelleniyor
-      label.attr("x", function (d) { return d.x; })
-           .attr("y", function (d) { return d.y + 5; });
+      label
+        .attr("x", function (d) {
+          return d.x;
+        })
+        .attr("y", function (d) {
+          return d.y + 5;
+        });
     }
 
     function dragstarted(event, d) {
