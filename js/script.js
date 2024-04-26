@@ -127,7 +127,7 @@ d3.json("data/hisse_iliskileri.json").then(function (data) {
     }
 
     function dragged(event, d) {
-      // Sürüklenen düğümün konumu güncelleniyor
+      // Sürüklenen düğümün konumu günce  lleniyor
       d.fx = event.x;
       d.fy = event.y;
     }
