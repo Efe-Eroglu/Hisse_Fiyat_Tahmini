@@ -36,7 +36,7 @@ const fs = require('fs');
 
       if (index1 !== -1) {
         data.hisse_iliskileri[i].fiyat = parseFloat(hisseler[index1].Fiyat.replace(',', '.'));
-        data.hisse_iliskileri[i].fark = hisseler[index1].Fark; // Fark değeri string olarak saklanıyor
+        data.hisse_iliskileri[i].fark = hisseler[index1].Fark.charAt(0); // Fark değeri string olarak saklanıyor
       }
     }
 

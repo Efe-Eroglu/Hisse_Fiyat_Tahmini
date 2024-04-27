@@ -1,105 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kolere Hisseler</title>
-  <style>
-    /* CSS */
-    html::-webkit-scrollbar {
-      display: none;
-      scroll-behavior: smooth;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolere Hisseler</title>
+    <style>
+      /* CSS */
+      html::-webkit-scrollbar {
+        display: none;
+        scroll-behavior: smooth;
+      }
 
-    body {
-      background-color: #f9f9f9;
-    }
+      body {
+        background-color: #f9f9f9;
+      }
 
-    svg {
-      position: absolute;
-      top: 0;
-      margin-top: 150px;
-      left: 0;
-      border: 1px solid gray;
-    }
+      svg {
+        position: absolute;
+        top: 0;
+        margin-top: 150px;
+        left: 0;
+        border: 1px solid gray;
+      }
 
-    .link {
-      stroke: #ccc; /* Bağlantı çizgilerinin rengi */
-      stroke-width: 1.5px; /* Bağlantı çizgilerinin kalınlığı */
-    }
+      .link {
+        stroke-width: 1.5px; /* Bağlantı çizgilerinin kalınlığı */
+        stroke: #ccc; /* Bağlantı çizgilerinin varsayılan rengi */
+      }
 
-    .node {
-      fill: #00ffaa; /* Düğümlerin iç rengi */
-      stroke-width: 2px; /* Düğümlerin kenar kalınlığı */
-    }
+      .node {
+        stroke-width: 2px; /* Düğümlerin kenar kalınlığı */
+      }
 
-    .node-label {
-      font-size: 16px; /* Düğüm etiketlerinin yazı boyutu */
-      fill: #ffffff;
-      text-anchor: middle;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+      .node-label {
+        font-size: 16px; /* Düğüm etiketlerinin yazı boyutu */
+        fill: #ffffff;
+        text-anchor: middle;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-    .baslik {
-      text-align: center;
-      width: 600px;
-      margin: 0 auto;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
+      .baslik {
+        text-align: center;
+        width: 600px;
+        margin: 0 auto;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-    .aciklama {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
+      .aciklama {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-    .ters {
-      display: flex;
-    }
+      .ters {
+        display: flex;
+      }
 
-    .kolere {
-      display: flex;
-    }
-  </style>
-</head>
-<body>
-  <div class="baslik">
-    <h1>Kolere Hisselerin Görselleştirilmesi</h1>
-    <div class="aciklama">
-      <div class="kolere">
-        Kolere :
-        <div
-          style="
-            background-color: red;
-            font-size: 12px;
-            width: 50px;
-            height: 12px;
-            margin-top: 5px;
-            margin-left: 10px;
-          "
-        ></div>
-      </div>
-      <div class="ters">
-        Ters Kolere
-        <div
-          style="
-            background-color: blue;
-            font-size: 12px;
-            width: 50px;
-            height: 12px;
-            margin-top: 5px;
-            margin-left: 10px;
-          "
-        ></div>
+      .kolere {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="baslik">
+      <h1>Korele Hisselerin Görselleştirilmesi</h1>
+      <div class="aciklama">
+        <div class="kolere">
+          Korele :
+          <div
+            style="
+              background-color: red;
+              font-size: 12px;
+              width: 50px;
+              height: 12px;
+              margin-top: 5px;
+              margin-left: 10px;
+            "
+          ></div>
+        </div>
+        <div class="ters">
+          Ters Korele
+          <div
+            style="
+              background-color: blue;
+              font-size: 12px;
+              width: 50px;
+              height: 12px;
+              margin-top: 5px;
+              margin-left: 10px;
+            "
+          ></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <svg width="2300" height="2500"></svg>
+    <svg width="2500" height="1500"></svg>
 
-  <script src="https://d3js.org/d3.v5.js"></script>
-  <script src="js/script.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script>
+      d3.json("data/hisse_iliskileri.json").then(function (data) {
+        var nodes = {};
+        var links = [];
 
-</body>
+        data.hisse_iliskileri.forEach(function (d) {
+          var source = d.hisse1;
+          var target = d.hisse2;
+          var relation = d.iliski;
+          var fiyat = d.fiyat;
+          var fark = d.fark || "";
+
+          if (!nodes[source]) nodes[source] = { name: source, value: 1, fark: fark, fiyat: fiyat };
+          if (!nodes[target]) nodes[target] = { name: target, value: 1, fark: fark, fiyat: fiyat };
+
+          var color = relation === "Korele" ? "red" : "blue";
+
+          links.push({
+            source: source,
+            target: target,
+            relation: relation,
+            color: color,
+          });
+        });
+
+        var svg = d3.select("svg"),
+          width = +svg.attr("width"),
+          height = +svg.attr("height"),
+          radius = Math.min(width, height) / 2 - 50;
+
+        var angle = (Math.PI * 2) / Object.keys(nodes).length;
+
+        Object.values(nodes).forEach(function (node, i) {
+          node.x = width / 2 + radius * Math.cos(angle * i);
+          node.y = height / 2 + radius * Math.sin(angle * i);
+        });
+
+        var scaleRadius = d3
+          .scaleLinear()
+          .domain(d3.extent(Object.values(nodes), d => d.fiyat))
+          .range([20, 80]); // minimum ve maksimum yarıçap değerleri
+
+        var link = svg
+          .selectAll(".link")
+          .data(links)
+          .enter()
+          .append("line")
+          .attr("class", "link")
+          .style("stroke", function (d) {
+            return d.color;
+          });
+
+        var nodeGroup = svg
+          .selectAll(".node")
+          .data(Object.values(nodes))
+          .enter()
+          .append("g")
+          .attr("class", "node")
+          .call(
+            d3
+              .drag()
+              .on("start", dragstarted)
+              .on("drag", dragged)
+              .on("end", dragended)
+          );
+
+        var node = nodeGroup
+          .append("circle")
+          .attr("r", function (d) {
+            return scaleRadius(d.fiyat);
+          })
+          .style("fill", function (d) {
+            return d.fark.charAt(0) === "-" ? "maroon" : "green";
+          })
+          .style("stroke", "#fff")
+          .style("stroke-width", "2px");
+
+        var label = nodeGroup
+          .append("text")
+          .attr("class", "node-label")
+          .text(function (d) {
+            return d.name;
+          });
+
+        var simulation = d3
+          .forceSimulation(Object.values(nodes))
+          .force(
+            "link",
+            d3.forceLink(links).id(function (d) {
+              return d.name;
+            })
+          )
+          .force("charge", d3.forceManyBody().strength(-100))
+          .force("center", d3.forceCenter(width / 2, height / 2))
+          .force("collide", d3.forceCollide().radius(120))
+          .force("y", d3.forceY(height / 2))
+          .force("x", d3.forceX(width / 2));
+
+        simulation.on("tick", ticked);
+
+        function ticked() {
+          link
+            .attr("x1", function (d) {
+              return d.source.x;
+            })
+            .attr("y1", function (d) {
+              return d.source.y;
+            })
+            .attr("x2", function (d) {
+              return d.target.x;
+            })
+            .attr("y2", function (d) {
+              return d.target.y;
+            });
+
+          node.attr("transform", function (d) {
+            return "translate(" + d.x + "," + d.y + ")";
+          });
+
+          label.attr("x", function (d) {
+            return d.x;
+          }).attr("y", function (d) {
+            return d.y + 5;
+          });
+        }
+
+        function dragstarted(event, d) {
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          d.fx = d.x;
+          d.fy = d.y;
+        }
+
+        function dragged(event, d) {
+          d.fx = event.x;
+          d.fy = event.y;
+        }
+
+        function dragended(event, d) {
+          if (!event.active) simulation.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+        }
+      });
+    </script>
+  </body>
 </html>
+  
