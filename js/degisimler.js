@@ -1,54 +1,43 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-(async () => {
+async function fetchDataAndSave() {
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+
   try {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+    // Navigate directly to the page without waiting for resources like images
+    await page.goto('https://www.getmidas.com/canli-borsa/xu050-bist-50-hisseleri', {
+      waitUntil: 'domcontentloaded',
+      timeout: 0 // Set to 0 to ensure page load
+    });
 
-    await page.goto('https://www.getmidas.com/canli-borsa/xu050-bist-50-hisseleri');
+    // Wait for the table to load
+    await page.waitForSelector('table tbody tr');
 
-    await page.waitForSelector('button[class*="btn btn-primary js-close-cookie"]');
-    const acceptCookiesButton = await page.$('button[class*="btn btn-primary js-close-cookie"]');
-    await acceptCookiesButton.click();
+    // Fetch stock data
+    const hisseler = await page.evaluate(() => {
+      const rows = Array.from(document.querySelectorAll('table tbody tr'));
+      return rows.map(row => {
+        const hisse = row.querySelector('td:nth-child(1) a').textContent.trim();
+        const fiyat = row.querySelector('td:nth-child(2)').textContent.trim();
+        const fark = row.querySelector('td:nth-child(5)').textContent.trim();
+        return { "Hisse": hisse, "Fiyat": fiyat, "Fark": fark };
+      });
+    });
 
-    const rows = await page.$$('table tbody tr');
+    // Write stock data to fiyatlar.json
+    fs.writeFileSync('../data/fiyatlar.json', JSON.stringify(hisseler, null, 2));
 
-    const hisseler = [];
-    for (const row of rows) {
-      const hisse = await row.$eval('td:nth-child(1) a', node => node.textContent.trim());
-      const fiyat = await row.$eval('td:nth-child(2)', node => node.textContent.trim());
-      const fark = await row.$eval('td:nth-child(5)', node => node.textContent.trim());
-
-      hisseler.push({ "Hisse": hisse, "Fiyat": fiyat, "Fark": fark });
-    }
-
-    console.log(hisseler);
-
-    // JSON dosyasını oku
-    let jsonContent = fs.readFileSync('../data/hisse_iliskileri.json');
-    let data = JSON.parse(jsonContent);
-
-    // Her hisse için fiyat ve fark değerlerini ekle
-    for (let i = 0; i < data.hisse_iliskileri.length; i++) {
-      let hisse1 = data.hisse_iliskileri[i].hisse1;
-      let index1 = hisseler.findIndex(hisse => hisse.Hisse === hisse1);
-
-      if (index1 !== -1) {
-        data.hisse_iliskileri[i].fiyat = parseFloat(hisseler[index1].Fiyat.replace(',', '.'));
-        data.hisse_iliskileri[i].fark = hisseler[index1].Fark.charAt(0); // Fark değeri string olarak saklanıyor
-      }
-    }
-
-    // Verileri JSON formatına dönüştür ve dosyaya yaz
-    jsonContent = JSON.stringify(data, null, 2);
-    fs.writeFileSync('../data/hisse_iliskileri.json', jsonContent);
-
-    console.log("Veriler başarıyla güncellendi.");
-
-    await browser.close();
+    console.log("Veriler başarıyla kaydedildi.");
   } catch (error) {
-    console.error("Bir hata oluştu:", error);
-    process.exit(1);
+    console.error("Hata:", error);
+  } finally {
+    // Close the browser
+    await browser.close();
   }
-})();
+}
+
+fetchDataAndSave();
+
+setInterval(fetchDataAndSave, 10000); // Her 10 saniyede bir veri alıp kaydet
