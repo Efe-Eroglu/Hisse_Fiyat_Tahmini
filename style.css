@@ -1,0 +1,90 @@
+html::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+.container1,
+.container2 {
+  background-color: red;
+  width: 50px;
+  height: 12px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.container2 {
+  background-color: blue;
+}
+body {
+  background-color: #ffffff;
+}
+#sayac {
+  position: absolute;
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(6, 63, 205); 
+  z-index: 999;
+  top: 10px;
+  left: 20px;
+}
+svg {
+  position: absolute;
+  top: 50;
+  margin-top: 150px;
+  left: 0;
+  border: 1px solid gray;
+}
+
+.link {
+  stroke-width: 1.5px; /* Bağlantı çizgilerinin kalınlığı */
+  stroke: #ccc; /* Bağlantı çizgilerinin varsayılan rengi */
+}
+
+.node {
+  stroke-width: 4px; /* Düğümlerin kenar kalınlığı */
+}
+
+.node-label {
+  font-size: 16px; /* Düğüm etiketlerinin yazı boyutu */
+  fill: #ffffff;
+  text-anchor: middle;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.baslik {
+  text-align: center;
+  width: 1600px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(6, 63, 205);
+  font-size: 32px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.aciklama {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ters {
+  display: flex;
+}
+
+.kolere {
+  display: flex;
+}
+button{
+  padding: 15px;
+  background-color: rgb(6, 63, 205);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  font-size: 24px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+}

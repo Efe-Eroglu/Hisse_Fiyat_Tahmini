@@ -3,996 +3,217 @@
     {
       "hisse1": "AKBNK",
       "hisse2": "ASELS",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
-    },
-    {
-      "hisse1": "AKBNK",
-      "hisse2": "BIMAS",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
-    },
-    {
-      "hisse1": "AKBNK",
-      "hisse2": "EGEEN",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
-    },
-    {
-      "hisse1": "AKBNK",
-      "hisse2": "GARAN",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
-    },
-    {
-      "hisse1": "AKBNK",
-      "hisse2": "ISCTR",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
+      "iliski": "Korele"
     },
     {
       "hisse1": "AKBNK",
       "hisse2": "KCHOL",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
-    },
-    {
-      "hisse1": "AKBNK",
-      "hisse2": "SAHOL",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
-    },
-    {
-      "hisse1": "AKBNK",
-      "hisse2": "TAVHL",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
-    },
-    {
-      "hisse1": "AKBNK",
-      "hisse2": "TCELL",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
-    },
-    {
-      "hisse1": "AKBNK",
-      "hisse2": "TTKOM",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
-    },
-    {
-      "hisse1": "AKBNK",
-      "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 59.05,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ALARK",
-      "hisse2": "ARCLK",
-      "iliski": "Korele",
-      "fiyat": 116.2,
-      "fark": "1"
+      "iliski": "Korele"
     },
     {
       "hisse1": "ALARK",
       "hisse2": "DOAS",
-      "iliski": "Korele",
-      "fiyat": 116.2,
-      "fark": "1"
-    },
-    {
-      "hisse1": "ALARK",
-      "hisse2": "DOHOL",
-      "iliski": "Korele",
-      "fiyat": 116.2,
-      "fark": "1"
+      "iliski": "Korele"
     },
     {
       "hisse1": "ALARK",
       "hisse2": "ENJSA",
-      "iliski": "Korele",
-      "fiyat": 116.2,
-      "fark": "1"
+      "iliski": "Korele"
     },
     {
       "hisse1": "ALARK",
       "hisse2": "PGSUS",
-      "iliski": "Korele",
-      "fiyat": 116.2,
-      "fark": "1"
-    },
-    {
-      "hisse1": "ALFAS",
-      "hisse2": "ASTOR",
-      "iliski": "Korele",
-      "fiyat": 92.15,
-      "fark": "0"
-    },
-    {
-      "hisse1": "ALFAS",
-      "hisse2": "EUPWR",
-      "iliski": "Korele",
-      "fiyat": 92.15,
-      "fark": "0"
-    },
-    {
-      "hisse1": "ALFAS",
-      "hisse2": "KONTR",
-      "iliski": "Korele",
-      "fiyat": 92.15,
-      "fark": "0"
+      "iliski": "Korele"
     },
     {
       "hisse1": "ALFAS",
       "hisse2": "ODAS",
-      "iliski": "Korele",
-      "fiyat": 92.15,
-      "fark": "0"
+      "iliski": "Korele"
     },
     {
       "hisse1": "ALFAS",
       "hisse2": "OYAKC",
-      "iliski": "Korele",
-      "fiyat": 92.15,
-      "fark": "0"
-    },
-    {
-      "hisse1": "ALFAS",
-      "hisse2": "SMRTG",
-      "iliski": "Korele",
-      "fiyat": 92.15,
-      "fark": "0"
+      "iliski": "Korele"
     },
     {
       "hisse1": "ARCLK",
       "hisse2": "DOHOL",
-      "iliski": "Korele",
-      "fiyat": 168.2,
-      "fark": "-"
+      "iliski": "Korele"
     },
     {
       "hisse1": "ARCLK",
       "hisse2": "PGSUS",
-      "iliski": "Korele",
-      "fiyat": 168.2,
-      "fark": "-"
-    },
-    {
-      "hisse1": "ARCLK",
-      "hisse2": "SISE",
-      "iliski": "Korele",
-      "fiyat": 168.2,
-      "fark": "-"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "BIMAS",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "EGEEN",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "ENJSA",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "GARAN",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "ISCTR",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "KCHOL",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "MGROS",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "SAHOL",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "TAVHL",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "TCELL",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "THYAO",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "TUPRS",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "ULKER",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASELS",
-      "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 59.1,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASTOR",
-      "hisse2": "DOHOL",
-      "iliski": "Korele",
-      "fiyat": 96.8,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASTOR",
-      "hisse2": "EUPWR",
-      "iliski": "Korele",
-      "fiyat": 96.8,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASTOR",
-      "hisse2": "KONTR",
-      "iliski": "Korele",
-      "fiyat": 96.8,
-      "fark": "2"
+      "iliski": "Korele"
     },
     {
       "hisse1": "ASTOR",
       "hisse2": "ODAS",
-      "iliski": "Korele",
-      "fiyat": 96.8,
-      "fark": "2"
+      "iliski": "Korele"
     },
     {
       "hisse1": "ASTOR",
       "hisse2": "OYAKC",
-      "iliski": "Korele",
-      "fiyat": 96.8,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASTOR",
-      "hisse2": "SISE",
-      "iliski": "Korele",
-      "fiyat": 96.8,
-      "fark": "2"
-    },
-    {
-      "hisse1": "ASTOR",
-      "hisse2": "SMRTG",
-      "iliski": "Korele",
-      "fiyat": 96.8,
-      "fark": "2"
-    },
-    {
-      "hisse1": "BIMAS",
-      "hisse2": "EGEEN",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
-    },
-    {
-      "hisse1": "BIMAS",
-      "hisse2": "ENJSA",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
-    },
-    {
-      "hisse1": "BIMAS",
-      "hisse2": "GARAN",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
-    },
-    {
-      "hisse1": "BIMAS",
-      "hisse2": "ISCTR",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
-    },
-    {
-      "hisse1": "BIMAS",
-      "hisse2": "KCHOL",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
-    },
-    {
-      "hisse1": "BIMAS",
-      "hisse2": "MGROS",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
-    },
-    {
-      "hisse1": "BIMAS",
-      "hisse2": "SAHOL",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
-    },
-    {
-      "hisse1": "BIMAS",
-      "hisse2": "TCELL",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
-    },
-    {
-      "hisse1": "BIMAS",
-      "hisse2": "TUPRS",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
+      "iliski": "Korele"
     },
     {
       "hisse1": "BIMAS",
       "hisse2": "ULKER",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
-    },
-    {
-      "hisse1": "BIMAS",
-      "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 386.5,
-      "fark": "3"
+      "iliski": "Korele"
     },
     {
       "hisse1": "CIMSA",
       "hisse2": "KONTR",
-      "iliski": "Korele",
-      "fiyat": 32.98,
-      "fark": "2"
+      "iliski": "Korele"
     },
     {
       "hisse1": "CIMSA",
       "hisse2": "OYAKC",
-      "iliski": "Korele",
-      "fiyat": 32.98,
-      "fark": "2"
-    },
-    {
-      "hisse1": "DOAS",
-      "hisse2": "ENJSA",
-      "iliski": "Korele",
-      "fiyat": 310.25,
-      "fark": "0"
+      "iliski": "Korele"
     },
     {
       "hisse1": "DOAS",
       "hisse2": "KCHOL",
-      "iliski": "Korele",
-      "fiyat": 310.25,
-      "fark": "0"
-    },
-    {
-      "hisse1": "DOAS",
-      "hisse2": "THYAO",
-      "iliski": "Korele",
-      "fiyat": 310.25,
-      "fark": "0"
-    },
-    {
-      "hisse1": "DOHOL",
-      "hisse2": "KONTR",
-      "iliski": "Korele",
-      "fiyat": 14.34,
-      "fark": "0"
+      "iliski": "Korele"
     },
     {
       "hisse1": "DOHOL",
       "hisse2": "OYAKC",
-      "iliski": "Korele",
-      "fiyat": 14.34,
-      "fark": "0"
+      "iliski": "Korele"
     },
     {
       "hisse1": "EGEEN",
       "hisse2": "SAHOL",
-      "iliski": "Korele",
-      "fiyat": 15.837,
-      "fark": "-"
-    },
-    {
-      "hisse1": "EGEEN",
-      "hisse2": "ULKER",
-      "iliski": "Korele",
-      "fiyat": 15.837,
-      "fark": "-"
+      "iliski": "Korele"
     },
     {
       "hisse1": "EGEEN",
       "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 15.837,
-      "fark": "-"
-    },
-    {
-      "hisse1": "ENJSA",
-      "hisse2": "KCHOL",
-      "iliski": "Korele",
-      "fiyat": 66.7,
-      "fark": "1"
-    },
-    {
-      "hisse1": "ENJSA",
-      "hisse2": "MGROS",
-      "iliski": "Korele",
-      "fiyat": 66.7,
-      "fark": "1"
-    },
-    {
-      "hisse1": "ENJSA",
-      "hisse2": "PETKM",
-      "iliski": "Korele",
-      "fiyat": 66.7,
-      "fark": "1"
-    },
-    {
-      "hisse1": "ENJSA",
-      "hisse2": "SAHOL",
-      "iliski": "Korele",
-      "fiyat": 66.7,
-      "fark": "1"
-    },
-    {
-      "hisse1": "ENJSA",
-      "hisse2": "TAVHL",
-      "iliski": "Korele",
-      "fiyat": 66.7,
-      "fark": "1"
-    },
-    {
-      "hisse1": "ENJSA",
-      "hisse2": "TCELL",
-      "iliski": "Korele",
-      "fiyat": 66.7,
-      "fark": "1"
-    },
-    {
-      "hisse1": "ENJSA",
-      "hisse2": "THYAO",
-      "iliski": "Korele",
-      "fiyat": 66.7,
-      "fark": "1"
-    },
-    {
-      "hisse1": "ENJSA",
-      "hisse2": "TUPRS",
-      "iliski": "Korele",
-      "fiyat": 66.7,
-      "fark": "1"
+      "iliski": "Korele"
     },
     {
       "hisse1": "ENJSA",
       "hisse2": "ZOREN",
-      "iliski": "Korele",
-      "fiyat": 66.7,
-      "fark": "1"
+      "iliski": "Korele"
     },
     {
       "hisse1": "EUPWR",
       "hisse2": "KONTR",
-      "iliski": "Korele",
-      "fiyat": 153.6,
-      "fark": "1"
-    },
-    {
-      "hisse1": "EUPWR",
-      "hisse2": "OYAKC",
-      "iliski": "Korele",
-      "fiyat": 153.6,
-      "fark": "1"
+      "iliski": "Korele"
     },
     {
       "hisse1": "EUPWR",
       "hisse2": "SMRTG",
-      "iliski": "Korele",
-      "fiyat": 153.6,
-      "fark": "1"
+      "iliski": "Korele"
     },
     {
       "hisse1": "FROTO",
       "hisse2": "TAVHL",
-      "iliski": "Korele",
-      "fiyat": 1.109,
-      "fark": "1"
+      "iliski": "Korele"
     },
     {
       "hisse1": "FROTO",
       "hisse2": "VESTL",
-      "iliski": "Korele",
-      "fiyat": 1.109,
-      "fark": "1"
-    },
-    {
-      "hisse1": "GARAN",
-      "hisse2": "ISCTR",
-      "iliski": "Korele",
-      "fiyat": 80.85,
-      "fark": "2"
-    },
-    {
-      "hisse1": "GARAN",
-      "hisse2": "KCHOL",
-      "iliski": "Korele",
-      "fiyat": 80.85,
-      "fark": "2"
-    },
-    {
-      "hisse1": "GARAN",
-      "hisse2": "MGROS",
-      "iliski": "Korele",
-      "fiyat": 80.85,
-      "fark": "2"
-    },
-    {
-      "hisse1": "GARAN",
-      "hisse2": "SAHOL",
-      "iliski": "Korele",
-      "fiyat": 80.85,
-      "fark": "2"
+      "iliski": "Korele"
     },
     {
       "hisse1": "GARAN",
       "hisse2": "TCELL",
-      "iliski": "Korele",
-      "fiyat": 80.85,
-      "fark": "2"
+      "iliski": "Korele"
     },
     {
       "hisse1": "GARAN",
       "hisse2": "THYAO",
-      "iliski": "Korele",
-      "fiyat": 80.85,
-      "fark": "2"
-    },
-    {
-      "hisse1": "GARAN",
-      "hisse2": "TTKOM",
-      "iliski": "Korele",
-      "fiyat": 80.85,
-      "fark": "2"
-    },
-    {
-      "hisse1": "GARAN",
-      "hisse2": "TUPRS",
-      "iliski": "Korele",
-      "fiyat": 80.85,
-      "fark": "2"
-    },
-    {
-      "hisse1": "GARAN",
-      "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 80.85,
-      "fark": "2"
+      "iliski": "Korele"
     },
     {
       "hisse1": "GESAN",
       "hisse2": "ODAS",
-      "iliski": "Korele",
-      "fiyat": 73.6,
-      "fark": "-"
+      "iliski": "Korele"
     },
     {
       "hisse1": "GESAN",
       "hisse2": "SMRTG",
-      "iliski": "Korele",
-      "fiyat": 73.6,
-      "fark": "-"
-    },
-    {
-      "hisse1": "ISCTR",
-      "hisse2": "KCHOL",
-      "iliski": "Korele",
-      "fiyat": 13.29,
-      "fark": "4"
-    },
-    {
-      "hisse1": "ISCTR",
-      "hisse2": "MGROS",
-      "iliski": "Korele",
-      "fiyat": 13.29,
-      "fark": "4"
-    },
-    {
-      "hisse1": "ISCTR",
-      "hisse2": "SAHOL",
-      "iliski": "Korele",
-      "fiyat": 13.29,
-      "fark": "4"
-    },
-    {
-      "hisse1": "ISCTR",
-      "hisse2": "TCELL",
-      "iliski": "Korele",
-      "fiyat": 13.29,
-      "fark": "4"
-    },
-    {
-      "hisse1": "ISCTR",
-      "hisse2": "TUPRS",
-      "iliski": "Korele",
-      "fiyat": 13.29,
-      "fark": "4"
-    },
-    {
-      "hisse1": "ISCTR",
-      "hisse2": "ULKER",
-      "iliski": "Korele",
-      "fiyat": 13.29,
-      "fark": "4"
-    },
-    {
-      "hisse1": "ISCTR",
-      "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 13.29,
-      "fark": "4"
-    },
-    {
-      "hisse1": "KCHOL",
-      "hisse2": "MGROS",
-      "iliski": "Korele",
-      "fiyat": 217,
-      "fark": "1"
-    },
-    {
-      "hisse1": "KCHOL",
-      "hisse2": "SAHOL",
-      "iliski": "Korele",
-      "fiyat": 217,
-      "fark": "1"
-    },
-    {
-      "hisse1": "KCHOL",
-      "hisse2": "TAVHL",
-      "iliski": "Korele",
-      "fiyat": 217,
-      "fark": "1"
-    },
-    {
-      "hisse1": "KCHOL",
-      "hisse2": "TCELL",
-      "iliski": "Korele",
-      "fiyat": 217,
-      "fark": "1"
-    },
-    {
-      "hisse1": "KCHOL",
-      "hisse2": "THYAO",
-      "iliski": "Korele",
-      "fiyat": 217,
-      "fark": "1"
-    },
-    {
-      "hisse1": "KCHOL",
-      "hisse2": "TUPRS",
-      "iliski": "Korele",
-      "fiyat": 217,
-      "fark": "1"
-    },
-    {
-      "hisse1": "KCHOL",
-      "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 217,
-      "fark": "1"
+      "iliski": "Korele"
     },
     {
       "hisse1": "KONTR",
       "hisse2": "ODAS",
-      "iliski": "Korele",
-      "fiyat": 241.4,
-      "fark": "2"
-    },
-    {
-      "hisse1": "KONTR",
-      "hisse2": "OYAKC",
-      "iliski": "Korele",
-      "fiyat": 241.4,
-      "fark": "2"
-    },
-    {
-      "hisse1": "KONTR",
-      "hisse2": "SMRTG",
-      "iliski": "Korele",
-      "fiyat": 241.4,
-      "fark": "2"
+      "iliski": "Korele"
     },
     {
       "hisse1": "KOZAA",
       "hisse2": "KOZAL",
-      "iliski": "Korele",
-      "fiyat": 51.85,
-      "fark": "1"
-    },
-    {
-      "hisse1": "KRDMD",
-      "hisse2": "OYAKC",
-      "iliski": "Korele",
-      "fiyat": 25.9,
-      "fark": "3"
+      "iliski": "Korele"
     },
     {
       "hisse1": "KRDMD",
       "hisse2": "SISE",
-      "iliski": "Korele",
-      "fiyat": 25.9,
-      "fark": "3"
-    },
-    {
-      "hisse1": "MGROS",
-      "hisse2": "PETKM",
-      "iliski": "Korele",
-      "fiyat": 442.75,
-      "fark": "0"
-    },
-    {
-      "hisse1": "MGROS",
-      "hisse2": "SAHOL",
-      "iliski": "Korele",
-      "fiyat": 442.75,
-      "fark": "0"
-    },
-    {
-      "hisse1": "MGROS",
-      "hisse2": "TCELL",
-      "iliski": "Korele",
-      "fiyat": 442.75,
-      "fark": "0"
+      "iliski": "Korele"
     },
     {
       "hisse1": "MGROS",
       "hisse2": "THYAO",
-      "iliski": "Korele",
-      "fiyat": 442.75,
-      "fark": "0"
-    },
-    {
-      "hisse1": "MGROS",
-      "hisse2": "TUPRS",
-      "iliski": "Korele",
-      "fiyat": 442.75,
-      "fark": "0"
-    },
-    {
-      "hisse1": "MGROS",
-      "hisse2": "ULKER",
-      "iliski": "Korele",
-      "fiyat": 442.75,
-      "fark": "0"
+      "iliski": "Korele"
     },
     {
       "hisse1": "MIATK",
       "hisse2": "ULKER",
-      "iliski": "Korele",
-      "fiyat": 60.9,
-      "fark": "-"
-    },
-    {
-      "hisse1": "ODAS",
-      "hisse2": "SMRTG",
-      "iliski": "Korele",
-      "fiyat": 9.49,
-      "fark": "1"
-    },
-    {
-      "hisse1": "OYAKC",
-      "hisse2": "SMRTG",
-      "iliski": "Korele",
-      "fiyat": 61,
-      "fark": "4"
+      "iliski": "Korele"
     },
     {
       "hisse1": "SAHOL",
       "hisse2": "TAVHL",
-      "iliski": "Korele",
-      "fiyat": 91.3,
-      "fark": "2"
-    },
-    {
-      "hisse1": "SAHOL",
-      "hisse2": "TCELL",
-      "iliski": "Korele",
-      "fiyat": 91.3,
-      "fark": "2"
-    },
-    {
-      "hisse1": "SAHOL",
-      "hisse2": "THYAO",
-      "iliski": "Korele",
-      "fiyat": 91.3,
-      "fark": "2"
-    },
-    {
-      "hisse1": "SAHOL",
-      "hisse2": "TTKOM",
-      "iliski": "Korele",
-      "fiyat": 91.3,
-      "fark": "2"
-    },
-    {
-      "hisse1": "SAHOL",
-      "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 91.3,
-      "fark": "2"
+      "iliski": "Korele"
     },
     {
       "hisse1": "SISE",
       "hisse2": "SMRTG",
-      "iliski": "Korele",
-      "fiyat": 50.45,
-      "fark": "3"
-    },
-    {
-      "hisse1": "TAVHL",
-      "hisse2": "THYAO",
-      "iliski": "Korele",
-      "fiyat": 217.1,
-      "fark": "6"
+      "iliski": "Korele"
     },
     {
       "hisse1": "TAVHL",
       "hisse2": "VESTL",
-      "iliski": "Korele",
-      "fiyat": 217.1,
-      "fark": "6"
-    },
-    {
-      "hisse1": "TAVHL",
-      "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 217.1,
-      "fark": "6"
+      "iliski": "Korele"
     },
     {
       "hisse1": "TCELL",
       "hisse2": "THYAO",
-      "iliski": "Korele",
-      "fiyat": 79.1,
-      "fark": "0"
+      "iliski": "Korele"
     },
     {
       "hisse1": "TCELL",
       "hisse2": "TTKOM",
-      "iliski": "Korele",
-      "fiyat": 79.1,
-      "fark": "0"
-    },
-    {
-      "hisse1": "TCELL",
-      "hisse2": "TUPRS",
-      "iliski": "Korele",
-      "fiyat": 79.1,
-      "fark": "0"
-    },
-    {
-      "hisse1": "TCELL",
-      "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 79.1,
-      "fark": "0"
-    },
-    {
-      "hisse1": "TTKOM",
-      "hisse2": "YKBNK",
-      "iliski": "Korele",
-      "fiyat": 40.22,
-      "fark": "0"
-    },
-    {
-      "hisse1": "TUPRS",
-      "hisse2": "ULKER",
-      "iliski": "Korele",
-      "fiyat": 192.1,
-      "fark": "1"
+      "iliski": "Korele"
     },
     {
       "hisse1": "AKBNK",
       "hisse2": "HEKTS",
-      "iliski": "Ters Korele",
-      "fiyat": 59.05,
-      "fark": "2"
+      "iliski": "Ters Korele"
     },
     {
       "hisse1": "BIMAS",
       "hisse2": "HEKTS",
-      "iliski": "Ters Korele",
-      "fiyat": 386.5,
-      "fark": "3"
+      "iliski": "Ters Korele"
     },
     {
       "hisse1": "EGEEN",
       "hisse2": "HEKTS",
-      "iliski": "Ters Korele",
-      "fiyat": 15.837,
-      "fark": "-"
+      "iliski": "Ters Korele"
     },
     {
       "hisse1": "HEKTS",
       "hisse2": "ISCTR",
-      "iliski": "Ters Korele",
-      "fiyat": 15.42,
-      "fark": "0"
+      "iliski": "Ters Korele"
     },
     {
       "hisse1": "HEKTS",
       "hisse2": "ULKER",
-      "iliski": "Ters Korele",
-      "fiyat": 15.42,
-      "fark": "0"
+      "iliski": "Ters Korele"
     },
     {
       "hisse1": "HEKTS",
       "hisse2": "YKBNK",
-      "iliski": "Ters Korele",
-      "fiyat": 15.42,
-      "fark": "0"
+      "iliski": "Ters Korele"
     }
   ]
 }
