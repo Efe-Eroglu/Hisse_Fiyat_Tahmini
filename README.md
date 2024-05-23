@@ -77,10 +77,10 @@ node degisimler.js
 ## Graf Görselleştirmesi
 
 
-![korele](https://github.com/Efe-Eroglu/Hisse_Fiyat_Tahmini/assets/95614657/1d7306b5-363d-4575-be95-a9147ef23d70)
 
 
 
+![graf](https://github.com/Efe-Eroglu/Hisse_Fiyat_Tahmini/assets/95614657/675510b4-b6c0-44dd-85d3-81e36b7dee1a)
 
 
 
